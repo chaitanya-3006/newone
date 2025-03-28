@@ -4,9 +4,9 @@ pipeline {
     maven 'maven'  // Use the maven tool auto-installed by Jenkins
     }
     stages {
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/chaitanya-3006/newone.git'
+                checkout scm  // Checks out code from your SCM (Git, etc.)
             }
         }
 
