@@ -12,7 +12,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
                 bat 'echo Building the project...'
                 // Replace with your actual build command
             }
