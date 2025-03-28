@@ -1,36 +1,31 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Checkout Code') {
             steps {
-                checkout scm
+                git 'https://github.com/chaitanya-3006/newone.git'
             }
         }
-        
+
         stage('Build') {
             steps {
-                script {
-                    sh 'javac Main.java' // Change 'Main.java' to your actual Java file
-                }
+                bat 'echo Building the project...'
+                // Replace with your actual build command
             }
         }
-        
+
         stage('Test') {
             steps {
-                script {
-                    sh 'java Main' // Change 'Main' to your actual Java class
-                }
+                bat 'echo Running tests...'
+                // Replace with your test command
             }
         }
     }
-    
+
     post {
-        success {
-            echo 'Build completed successfully!'
-        }
         failure {
-            echo 'Build failed!'
+            echo "Build failed!"
         }
     }
 }
