@@ -20,6 +20,8 @@ pipeline {
 
         stage('Test') {
             steps {
+                sh 'maven test'
+                junit 'target/surefire-reports/**/*.xml' 
                 bat 'echo Running tests...'
                 // Replace with your test command
             }
