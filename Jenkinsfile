@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+         tools{
+    maven 'maven'  // Use the maven tool auto-installed by Jenkins
+    }
     stages {
         stage('Checkout Code') {
             steps {
