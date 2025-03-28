@@ -1,6 +1,6 @@
 pipeline {
     agent any
-         tools{
+    tools{
     maven 'maven'  // Use the maven tool auto-installed by Jenkins
     }
     stages {
