@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class AppTest {
     @Test
-    public void testApp() {
-        assertTrue(true);
+    public void testAddition() {
+        assertEquals(2, 1 + 1);
     }
 }
